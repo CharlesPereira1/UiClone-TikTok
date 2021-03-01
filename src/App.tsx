@@ -1,12 +1,9 @@
-import React from 'react';
-import {View, Text, StatusBar} from 'react-native';
+import React from "react";
 
-const App = () => {
-  return (
-    <>
-      <Text>Hello TikTok</Text>
-    </>
-  );
+import Routes from "./routes";
+
+const App: React.FC = () => {
+  return <Routes />;
 };
 
 export default App;
