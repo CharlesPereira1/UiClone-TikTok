@@ -1,6 +1,9 @@
 import React from "react";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import EntypoIcons from "react-native-vector-icons/Entypo";
+import FeatherIcons from "react-native-vector-icons/Feather";
+import AntIcons from "react-native-vector-icons/AntDesign";
 
 import Home from "../pages/Home";
 
@@ -16,11 +19,50 @@ const Routes: React.FC = () => (
       activeTintColor: "#fff",
     }}
   >
-    <Tabs.Screen name="Home" component={Home} />
-    <Tabs.Screen name="Discover" component={Home} />
-    <Tabs.Screen name="New" component={Home} />
-    <Tabs.Screen name="Inbox" component={Home} />
-    <Tabs.Screen name="Profile" component={Home} />
+    <Tabs.Screen
+      name="Home"
+      component={Home}
+      options={{
+        title: "",
+        tabBarIcon: ({ size, color }) => (
+          <EntypoIcons name="home" size={size} color={color} />
+        ),
+      }}
+    />
+    <Tabs.Screen
+      name="Discover"
+      component={Home}
+      options={{
+        tabBarIcon: ({ size, color }) => null,
+      }}
+    />
+    <Tabs.Screen
+      name="New"
+      component={Home}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <FeatherIcons name="chat" size={size} color={color} />
+        ),
+      }}
+    />
+    <Tabs.Screen
+      name="Inbox"
+      component={Home}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <EntypoIcons name="home" size={size} color={color} />
+        ),
+      }}
+    />
+    <Tabs.Screen
+      name="Profile"
+      component={Home}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <AntIcons name="user" size={size} color={color} />
+        ),
+      }}
+    />
   </Tabs.Navigator>
 );
 
