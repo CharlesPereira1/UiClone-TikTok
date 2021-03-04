@@ -6,6 +6,7 @@ import FeatherIcons from "react-native-vector-icons/Feather";
 import AntIcons from "react-native-vector-icons/AntDesign";
 
 import Home from "../pages/Home";
+import Button from "../components/Button";
 
 const Tabs = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ const Routes: React.FC = () => (
       name="Discover"
       component={Home}
       options={{
-        tabBarIcon: ({ size, color }) => null,
+        tabBarIcon: ({ size, color }) => <Button />,
       }}
     />
     <Tabs.Screen
